@@ -11,6 +11,15 @@ else ()
 endif ()
 
 set(ffmpeg_c_flags "${superbuild_c_flags}")
+set(ffmpeg_toolchain "")
+if (WIN32)
+  set(ffmpeg_cc "cl")
+  set(ffmpeg_toolchain "--toolchain=msvc")
+elseif (APPLE)
+  set(ffmpeg_cc "clang")
+else ()
+  set(ffmpeg_cc "gcc")
+endif ()
 if (APPLE AND CMAKE_OSX_SYSROOT)
   string(APPEND ffmpeg_c_flags " --sysroot=${CMAKE_OSX_SYSROOT}")
 endif ()
@@ -42,6 +51,8 @@ superbuild_add_project(ffmpeg
       --enable-libopenh264
       --enable-encoder=libopenh264
       --pkg-config=${superbuild_pkgconf}
+      --cc=${ffmpeg_cc}
+      ${ffmpeg_toolchain}
       ${ffmpeg_shared_args}
       --extra-cflags=${ffmpeg_c_flags}
       --extra-ldflags=${ffmpeg_ld_flags}
