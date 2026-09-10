@@ -46,6 +46,7 @@ superbuild_add_project(ffmpeg
       --prefix=<INSTALL_DIR>
       --disable-all
       --disable-autodetect
+      --disable-x86asm
       --enable-avcodec
       --enable-avutil
       # --enable-libopenh264
