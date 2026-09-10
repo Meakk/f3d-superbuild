@@ -11,7 +11,7 @@ endif ()
 
 superbuild_add_project(openh264
   BUILD_SHARED_LIBS_INDEPENDENT
-  DEPENDS meson ninja
+  DEPENDS meson ninja # nasm
   LICENSE_FILES
     LICENSE
   SPDX_LICENSE_IDENTIFIER

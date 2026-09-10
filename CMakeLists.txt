@@ -55,6 +55,7 @@ function (superbuild_find_projects var)
     meson
     netcdf
     ninja
+    # nasm
     nlohmannjson
     occt
     openexr
@@ -163,7 +164,7 @@ set(_superbuild_default_imgui ON)
 set(_superbuild_default_occt ON)
 set(_superbuild_default_openvdb ON)
 set(_superbuild_default_openexr ON)
-set(_superbuild_default_openh264 ON)
+# set(_superbuild_default_openh264 ON)
 set(_superbuild_default_openusd ON)
 set(_superbuild_default_ospray ON)
 set(_superbuild_default_pdal ON)

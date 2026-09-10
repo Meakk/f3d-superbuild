@@ -33,7 +33,7 @@ endif ()
 
 superbuild_add_project(ffmpeg
   BUILD_SHARED_LIBS_INDEPENDENT
-  DEPENDS pkgconf openh264
+  DEPENDS pkgconf # openh264
   LICENSE_FILES
     LICENSE.md
     COPYING.LGPLv2.1
@@ -48,8 +48,8 @@ superbuild_add_project(ffmpeg
       --disable-autodetect
       --enable-avcodec
       --enable-avutil
-      --enable-libopenh264
-      --enable-encoder=libopenh264
+      # --enable-libopenh264
+      # --enable-encoder=libopenh264
       --pkg-config=${superbuild_pkgconf}
       --cc=${ffmpeg_cc}
       ${ffmpeg_toolchain}
