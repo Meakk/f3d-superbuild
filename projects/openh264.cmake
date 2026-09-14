@@ -23,6 +23,7 @@ superbuild_add_project(openh264
       setup
       build
       --prefix=<INSTALL_DIR>
+      --libdir=lib
       --buildtype=release
       --default-library=${openh264_default_library}
   BUILD_COMMAND
