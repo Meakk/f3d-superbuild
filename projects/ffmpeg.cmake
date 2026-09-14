@@ -11,12 +11,13 @@ else ()
 endif ()
 
 set(ffmpeg_c_flags "${superbuild_c_flags}")
-set(ffmpeg_toolchain "")
+set(ffmpeg_extra_args "")
 if (WIN32)
   set(ffmpeg_cc "cl")
-  set(ffmpeg_toolchain "--toolchain=msvc")
+  set(ffmpeg_extra_args "--toolchain=msvc")
 elseif (APPLE)
   set(ffmpeg_cc "clang")
+  set(ffmpeg_extra_args "--install-name-dir=@rpath")
 else ()
   set(ffmpeg_cc "gcc")
 endif ()
@@ -33,7 +34,7 @@ endif ()
 
 superbuild_add_project(ffmpeg
   BUILD_SHARED_LIBS_INDEPENDENT
-  DEPENDS pkgconf # openh264
+  DEPENDS pkgconf openh264
   LICENSE_FILES
     LICENSE.md
     COPYING.LGPLv2.1
@@ -49,11 +50,11 @@ superbuild_add_project(ffmpeg
       --disable-x86asm
       --enable-avcodec
       --enable-avutil
-      # --enable-libopenh264
-      # --enable-encoder=libopenh264
+      --enable-libopenh264
+      --enable-encoder=libopenh264
       --pkg-config=${superbuild_pkgconf}
       --cc=${ffmpeg_cc}
-      ${ffmpeg_toolchain}
+      ${ffmpeg_extra_args}
       ${ffmpeg_shared_args}
       --extra-cflags=${ffmpeg_c_flags}
       --extra-ldflags=${ffmpeg_ld_flags}
