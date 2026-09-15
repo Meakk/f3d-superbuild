@@ -46,4 +46,5 @@ superbuild_add_project(ffmpeg
     $(MAKE)
   INSTALL_COMMAND
     make install
-  BUILD_IN_SOURCE 1)
+  BUILD_IN_SOURCE 1
+  PROCESS_ENVIRONMENT PKG_CONFIG_PATH "${superbuild_pkg_config_path}")
