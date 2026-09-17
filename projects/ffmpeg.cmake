@@ -47,4 +47,6 @@ superbuild_add_project(ffmpeg
   INSTALL_COMMAND
     make install
   BUILD_IN_SOURCE 1
-  PROCESS_ENVIRONMENT PKG_CONFIG_PATH "${superbuild_pkg_config_path}")
+  PROCESS_ENVIRONMENT
+    PKG_CONFIG_ALLOW_SYSTEM_CFLAGS 1
+    PKG_CONFIG_ALLOW_SYSTEM_LIBS 1)

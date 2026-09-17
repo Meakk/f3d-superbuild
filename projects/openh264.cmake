@@ -26,6 +26,8 @@ superbuild_add_project(openh264
       --libdir=lib
       --buildtype=release
       --default-library=${openh264_default_library}
+      -Db_ndebug=true
+      -Dtests=disabled
   BUILD_COMMAND
     ${superbuild_ninja_command} -C build
   INSTALL_COMMAND
