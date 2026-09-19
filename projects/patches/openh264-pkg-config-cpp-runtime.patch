@@ -1,0 +1,10 @@
+diff --git a/meson.build b/meson.build
+index a0dfd219..e506ff9a 100644
+--- a/meson.build
++++ b/meson.build
+@@ -215,4 +215,5 @@ pkg.generate(libopenh264,
+   description: 'OpenH264 is a codec library which supports H.264 encoding ' +
+                'and decoding. It is suitable for use in real time ' +
+                'applications such as WebRTC.',
++  libraries_private: [cpp_lib],
+ )

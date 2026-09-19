@@ -45,6 +45,7 @@ superbuild_add_project(ffmpeg
       --enable-libopenh264
       --enable-encoder=libopenh264
       --pkg-config=${superbuild_pkgconf}
+      --pkg-config-flags=--static
       ${ffmpeg_extra_args}
       ${ffmpeg_shared_args}
       "--extra-cflags=${ffmpeg_c_flags}"

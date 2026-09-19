@@ -34,3 +34,8 @@ superbuild_add_project(openh264
     ${superbuild_ninja_command} -C build install
   BUILD_IN_SOURCE 1
 )
+
+if (NOT openh264_build_shared)
+  superbuild_apply_patch(openh264 pkg-config-cpp-runtime
+    "Add the C++ runtime to the generated pkg-config metadata for static lib builds")
+endif ()
