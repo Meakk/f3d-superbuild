@@ -13,6 +13,7 @@ cmake -S ./source -B ./fsbb           \
   -DENABLE_draco=ON                   \
   -DENABLE_egl=ON                     \
   -DENABLE_f3d=OFF                    \
+  -DENABLE_ffmpeg=ON                  \
   -DENABLE_imgui=ON                   \
   -DENABLE_occt=ON                    \
   -DENABLE_openexr=ON                 \
