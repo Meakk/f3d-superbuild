@@ -94,6 +94,7 @@ runs:
       -DBUILD_SHARED_LIBS_curl=OFF
       -DBUILD_SHARED_LIBS_draco=OFF
       -DBUILD_SHARED_LIBS_f3d=ON
+      -DBUILD_SHARED_LIBS_ffmpeg=OFF
       -DBUILD_SHARED_LIBS_gdal=OFF
       -DBUILD_SHARED_LIBS_geotiff=OFF
       -DBUILD_SHARED_LIBS_hdf5=ON
@@ -105,6 +106,7 @@ runs:
       -DBUILD_SHARED_LIBS_nlohmannjson=OFF
       -DBUILD_SHARED_LIBS_occt=OFF
       -DBUILD_SHARED_LIBS_openexr=OFF
+      -DBUILD_SHARED_LIBS_openh264=OFF
       -DBUILD_SHARED_LIBS_openjph=OFF
       -DBUILD_SHARED_LIBS_openusd=ON
       -DBUILD_SHARED_LIBS_openvdb=OFF
