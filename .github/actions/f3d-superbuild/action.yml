@@ -106,7 +106,7 @@ runs:
       -DBUILD_SHARED_LIBS_nlohmannjson=OFF
       -DBUILD_SHARED_LIBS_occt=OFF
       -DBUILD_SHARED_LIBS_openexr=OFF
-      -DBUILD_SHARED_LIBS_openh264=OFF
+      -DBUILD_SHARED_LIBS_openh264=ON
       -DBUILD_SHARED_LIBS_openjph=OFF
       -DBUILD_SHARED_LIBS_openusd=ON
       -DBUILD_SHARED_LIBS_openvdb=OFF
