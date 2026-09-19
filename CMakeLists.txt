@@ -29,6 +29,7 @@ endmacro ()
 function (superbuild_find_projects var)
 
   list(APPEND projects
+    pkgconf # Should be first otherwise openh264 cannot be found
     alembic
     assimp
     blosc
@@ -69,7 +70,6 @@ function (superbuild_find_projects var)
     ospray
     ospraymaterials
     pdal
-    pkgconf
     png
     proj
     pybind11
