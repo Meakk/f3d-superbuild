@@ -29,7 +29,6 @@ endmacro ()
 function (superbuild_find_projects var)
 
   list(APPEND projects
-    pkgconf # TODO: Why first?
     alembic
     assimp
     blosc
@@ -70,6 +69,7 @@ function (superbuild_find_projects var)
     ospray
     ospraymaterials
     pdal
+    pkgconf
     png
     proj
     pybind11
