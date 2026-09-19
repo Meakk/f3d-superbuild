@@ -57,3 +57,9 @@ superbuild_add_project(ffmpeg
   PROCESS_ENVIRONMENT
     PKG_CONFIG_ALLOW_SYSTEM_CFLAGS 1
     PKG_CONFIG_ALLOW_SYSTEM_LIBS 1)
+
+# There is a bug in ffmpeg configure when generating dependency files on Windows with MSVC.
+# Dependency files are not necessary for full build so they are patched out.
+# https://trac.ffmpeg.org/ticket/9043
+superbuild_apply_patch(ffmpeg skip-windows-depcmd
+  "Skip dependency command on Windows")
